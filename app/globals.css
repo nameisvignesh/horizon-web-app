@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* globals.css */
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  /* Removed overflow-y: hidden; to allow scrolling */
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #ff0000;
+  color: white;
+}
+
+html, body {
+  height: auto; /* Ensure body height is auto to allow scrolling */
+  margin: 0;
+  padding: 0;
+}
+
+/* Other styles remain unchanged */
+
+
+.weather:hover{
+  cursor: pointer;
+  transition: color 0.3s ease;
+  background: linear-gradient(to right, #93c5fd, #fca5a1); /* Adjust hex values for blue-300 and red-300 */
+  -webkit-background-clip: text; /* For WebKit browsers */
+  background-clip: text; /* Standard property */
+  color: transparent; /* Make text transparent */
+}
+
+.weather:active{
+  transition: color 0.3s ease;
+  background: linear-gradient(to right, #93c5fd, #fca5a1); /* Adjust hex values for blue-300 and red-300 */
+  -webkit-background-clip: text; /* For WebKit browsers */
+  background-clip: text; /* Standard property */
+  color: transparent; /* Make text transparent */
+}
